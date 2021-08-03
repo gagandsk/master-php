@@ -14,6 +14,17 @@
     <?="Curso de PHP - Victor Robles"?> <!--Atajo de echo-->
 
     <?php
+        //Comentario una sola linia
+        //echo "<h3>Nfortec</h3>";
+
+        /*
+        para hacer un 
+        comentario multi-linea
+        hay que hacerlo
+        asi
+        */
+
+
         echo "<h3>Listado de videojuegos:</h3>";
         echo "<ul>"
                 ."<li>GTA</li>"
