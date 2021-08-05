@@ -64,7 +64,6 @@ if($edad >= $mayor_edad){
 echo "<hr>";
 
 //Ejemplo 4
-
 $dia = 1;
 if($dia == 1){
     echo "LUNES";
@@ -78,6 +77,32 @@ if($dia == 1){
     echo "VIERNES";
 }else{
     echo "FIN DE SEMANA";
+}
+
+echo "<hr>";
+
+/*OPERADORES LOGICOS
+    && AND Y
+    || OR O
+    !  NOT NO
+*/
+$edad1 = 18;
+$edad2 = 64;
+$edad_oficial = 20;
+
+if($edad_oficial >= $edad1 && $edad_oficial <= $edad2){
+    echo "Esta en edad de trabajar";
+}else{
+    echo "no esta en edad de trabajar";
+}
+
+echo "<br>";
+
+$pais = "Francia";
+if($pais == "Mexico" || $pais == "Espanña" || $pais == "Colombia"){
+    echo "En este pais se habla español";
+}else{
+    echo "En este pais no se habla español";
 }
 
 ?>
