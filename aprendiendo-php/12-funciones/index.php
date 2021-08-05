@@ -19,12 +19,11 @@ function holaMundo(){
 }
 //Invocar funcion
 holaMundo();
-holaMundo();
-holaMundo();
+/*holaMundo();
+holaMundo();*/
 
 
 //Ejemplo 2
-
 function tabla ($numero){
     echo "<h3>Tabla de multiplicar del numero: $numero</h3>";
     for($i=1;$i<=10;$i++){
@@ -33,7 +32,7 @@ function tabla ($numero){
     }
 }
 
-tabla(5);
+//tabla(5);
 
 echo "<hr/>";
 
@@ -43,12 +42,30 @@ if(isset($_GET['numero'])){
 }else{
     echo "No hay numero para hacer la multiplicacion";
 }
-
+/*
 echo "<hr/>";
 echo "<hr/>";
 echo "Todas las tablas de multiplicar del 1-10";
 for($i=1;$i<=10;$i++){
     tabla($i);
 }
+*/
+echo "<hr/>";
+
+//Ejemplo 3
+function calculadora($numero1, $numero2){
+    //conjunto de instrucciones a ejecutar
+    $suma = $numero1+$numero2;
+    $resta = $numero1-$numero2;
+    $multiplicacion = $numero1*$numero2;
+    $division = $numero1/$numero2;
+    echo "Suma: $suma <br/>";
+    echo "Resta: $resta <br/>";
+    echo "Multiplicacion: $multiplicacion <br/>";
+    echo "Division: $division <br/>";
+    echo "<hr/>";
+}
+
+calculadora(40,30);
 
 ?>
