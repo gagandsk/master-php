@@ -24,4 +24,34 @@ function holaMundo(){
 
 holaMundo();
 
+//Funciones variables
+
+function buenasDias(){
+    return "<h1>Hola, buenos dias :D</h1>";
+}
+
+function buenasTardes(){
+    return "<h1>Buenas tardes</h1>";
+}
+
+function buenasNoches(){
+    return "<h1>Buenas noches</h1>";
+}
+
+    //1)
+$horario = "buenasDias";
+echo $horario();
+
+    //2)
+$horario = "Tardes";
+$miFuncion = "buenas".$horario;
+echo $miFuncion();
+
+/*
+    //3)
+$horario = $_GET['horario'];
+$miFuncion = "buenas".$horario;
+echo $miFuncion();
+*/
+
 ?>
