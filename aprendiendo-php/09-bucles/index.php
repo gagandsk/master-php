@@ -36,4 +36,26 @@ while($contador <=10){
     $contador++;
 }
 
+echo "<hr/>";
+
+/*BUCLE DO-WHILE
+Estructura de control que itera/repite la ejecucion de una serie de instrucciones 
+tantas veces sea necesario, en base a una condicion
+
+do{
+    //bloque de instrucciones
+}while(condicion);
+
+*/
+
+$edad = 17;
+
+$contador = 1;
+do{
+    echo "Tienes acceso al local privado $contador <br/>";
+    $contador++;
+}while($edad >= 18 && $contador <=10);
+
+
+
 ?>
