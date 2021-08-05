@@ -31,7 +31,7 @@ if($color=="Rojo"){
 }
 
 echo "<br/>";
-echo "<hr>";
+echo "<hr/>";
 
 
 //Ejemplo 2
@@ -42,7 +42,7 @@ if($year >= 2019){
     echo "Es un año anterioir a 2019";
 }
 
-echo "<hr>";
+echo "<hr/>";
 
 //Ejemplo 3
 $nombre = "Roronoa Zoro";
@@ -61,7 +61,7 @@ if($edad >= $mayor_edad){
     echo "<h2>$nombre no es mayor de edad</h2>";
 }
 
-echo "<hr>";
+echo "<hr/>";
 
 //Ejemplo 4
 $dia = 1;
@@ -79,7 +79,7 @@ if($dia == 1){
     echo "FIN DE SEMANA";
 }
 
-echo "<hr>";
+echo "<hr/>";
 
 /*OPERADORES LOGICOS
     && AND Y
@@ -105,7 +105,7 @@ if($pais == "Mexico" || $pais == "Espanña" || $pais == "Colombia"){
     echo "En este pais no se habla español";
 }
 
-echo "<hr>";
+echo "<hr/>";
 
 //SWITCH
 $dia = 2;
