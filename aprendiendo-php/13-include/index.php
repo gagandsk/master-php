@@ -1,6 +1,8 @@
-<?php
-include 'includes/header.php';
-?>
+<?php 
+require_once 'includes/header.php';
+/*include 'includes/header.php';
+require 'includes/header.php';
+include_once 'includes/header.php';*/ ?>
 
     <div>
         <h2>Esta es la pagina de inicio</h2>
@@ -10,4 +12,4 @@ include 'includes/header.php';
 
     <?php var_dump($nombre) ?>
 
-<?php include 'includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>
