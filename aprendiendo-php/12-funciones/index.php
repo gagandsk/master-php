@@ -60,23 +60,35 @@ function calculadora($numero1, $numero2, $color = false){
     $multiplicacion = $numero1*$numero2;
     $division = $numero1/$numero2;
 
-    if($color){
-        echo "<h1>";
-    }
-
-    echo "Suma: $suma <br/>";
-    echo "Resta: $resta <br/>";
-    echo "Multiplicacion: $multiplicacion <br/>";
-    echo "Division: $division <br/>";
+    $cadena_texto = "";
 
     if($color){
-        echo "</h1>";
+        $cadena_texto.="<h1>";
     }
 
-    echo "<hr/>";
+    $cadena_texto.= "Suma: $suma <br/>";
+    $cadena_texto.= "Resta: $resta <br/>";
+    $cadena_texto.= "Multiplicacion: $multiplicacion <br/>";
+    $cadena_texto.= "Division: $division <br/>";
+
+    if($color){
+        $cadena_texto.= "</h1>";
+    }
+
+    $cadena_texto.= "<hr/>";
+
+    //var_dump($cadena_texto);
+    return $cadena_texto;
 }
 
-calculadora(40,30, false);
-calculadora(40,30,true);
+echo calculadora(40,30, false);
+echo calculadora(40,30,true);
+
+//RETURN
+function devuelveElNombre($nombre){
+    return $nombre;
+}
+
+echo devuelveElNombre("Gagan");
 
 ?>
