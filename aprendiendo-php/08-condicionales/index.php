@@ -51,7 +51,7 @@ $mayor_edad = 18;
 $ciudad = "Wano";
 $continente = "Asia";
 if($edad >= $mayor_edad){
-    echo "<h1>$nombre es major de edad</h1>";
+    echo "<h1>$nombre es mayor de edad</h1>";
     if($continente == "Asia"){
         echo "<h2>Y es de $ciudad</h2>";
     }else{
@@ -128,5 +128,15 @@ switch ($dia){
     default:
         echo "FIN DE SEMANA";    
 }
+
+// GOTO
+goto marca;
+echo "<h3>1</h3>";
+echo "<h3>2</h3>";
+echo "<h3>3</h3>";
+echo "<h3>4</h3>";
+
+marca:
+echo "<h1>Me he saltado 4 echos</h1>";
 
 ?>
