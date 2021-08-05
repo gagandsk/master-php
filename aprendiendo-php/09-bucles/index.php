@@ -29,7 +29,7 @@ if(isset($_GET['numero'])){
     $numero = 1;
 }
 
-echo "<h1>Tabla de multiplicar del numero $numero</h1>";
+echo "<h1>Tabla de multiplicar del numero $numero  (bucle while)</h1>";
 $contador = 0;
 while($contador <=10){
     echo "$numero x $contador =".($numero * $contador)."<br>";
