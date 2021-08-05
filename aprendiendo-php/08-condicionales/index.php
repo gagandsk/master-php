@@ -31,6 +31,8 @@ if($color=="Rojo"){
 }
 
 echo "<br/>";
+echo "<hr>";
+
 
 //Ejemplo 2
 $year = 2029;
@@ -39,6 +41,8 @@ if($year >= 2019){
 }else{
     echo "Es un año anterioir a 2019";
 }
+
+echo "<hr>";
 
 //Ejemplo 3
 $nombre = "Roronoa Zoro";
@@ -55,6 +59,25 @@ if($edad >= $mayor_edad){
     }
 }else{ 
     echo "<h2>$nombre no es mayor de edad</h2>";
+}
+
+echo "<hr>";
+
+//Ejemplo 4
+
+$dia = 1;
+if($dia == 1){
+    echo "LUNES";
+}elseif($dia == 2){
+    echo "MARTES";
+}elseif($dia == 3){
+    echo "MIERCOLES";
+}elseif($dia == 4){
+    echo "JUEVES";
+}elseif($dia == 5){
+    echo "VIERNES";
+}else{
+    echo "FIN DE SEMANA";
 }
 
 ?>
