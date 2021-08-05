@@ -38,7 +38,7 @@ echo "<hr/>";
 
 if(isset($_GET['numero'])){
     tabla($_GET["numero"]);
-    tabla(2);
+    //tabla(2);
 }else{
     echo "No hay numero para hacer la multiplicacion";
 }
@@ -53,19 +53,30 @@ for($i=1;$i<=10;$i++){
 echo "<hr/>";
 
 //Ejemplo 3
-function calculadora($numero1, $numero2){
+function calculadora($numero1, $numero2, $color = false){
     //conjunto de instrucciones a ejecutar
     $suma = $numero1+$numero2;
     $resta = $numero1-$numero2;
     $multiplicacion = $numero1*$numero2;
     $division = $numero1/$numero2;
+
+    if($color){
+        echo "<h1>";
+    }
+
     echo "Suma: $suma <br/>";
     echo "Resta: $resta <br/>";
     echo "Multiplicacion: $multiplicacion <br/>";
     echo "Division: $division <br/>";
+
+    if($color){
+        echo "</h1>";
+    }
+
     echo "<hr/>";
 }
 
-calculadora(40,30);
+calculadora(40,30, false);
+calculadora(40,30,true);
 
 ?>
