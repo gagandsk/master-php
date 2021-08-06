@@ -7,50 +7,52 @@ haga lo siguiente:
     - Recorrerlo y mostrarlo
     - Ordenarlo y mostrarlo
     - Mostrar su longitud
-    - Buscar algun elemento
+    - Buscar algun elemento (por el parametro por URL (GET))
 */
 
-$numeros = [6,3,1,9,7,5,2,4];
-
-echo "Array original: ";
-foreach($numeros as $numero){
-    echo "<b> ".$numero."</b>";
-}
-echo "<hr>";
-
-/*
-for($i=1; $i<=8; $i++){
-    $randoms = rand(1,8);
-    if($randoms[$i] == $i){
-        $randoms = rand(1,8);
+function mostrarArray($numeros){
+    $resultado = "";
+    foreach($numeros as $numero){
+        $resultado.= "<b> ".$numero."</b>"; //$resultado = $resultado.$numero
     }
-    array_push($numeros, $randoms);
+    return $resultado;
 }
-*/
-    // 
+
+$numeros = array(6,3,1,9,7,5,2,4);
+
 echo "Recorrerlo y mostrarlo <br>";
-foreach($numeros as $numero){
-    echo "<b> ".$numero."</b>";
-}
+echo mostrarArray($numeros);
 echo "<hr>";
 
 echo "Ordenarlo y mostrarlo<br>";
-asort($numeros);
-foreach($numeros as $numero){
-    echo "<b> ".$numero."</b>";
-}
+sort($numeros);
+echo mostrarArray($numeros);
 echo "<hr>";
 
 echo "Mostrar su longitud<br>";
-echo "La longirud del array es: ".sizeof($numeros);
+echo "La longirud del array es: ".count($numeros); //sizeof
 echo "<hr>";
 
 echo "Buscar algun elemento<br>";
-$numero_a_buscar = 12;
+$numero_a_buscar = 7;
 $posicion_numero = array_search($numero_a_buscar,$numeros);
-if($posicion_numero){
-    echo "El numero $numero_a_buscar esta en la posicion $posicion_numero<br>";
+
+if(!empty($posicion_numero)){
+    echo "El numero $numero_a_buscar existe y esta en la posicion $posicion_numero<br>";
 }else{
-    echo "El numero $numero_a_buscar no se encuentra en el array<br>";
+    echo "El numero $numero_a_buscar no existe y no se encuentra en el array<br>";
 }
+
+/*
+// Con GET por URL
+if(isset($_GET['numero'])){
+    $numero_a_buscar = $_GET['numero'];
+    $posicion_numero = array_search($numero_a_buscar,$numeros);
+    if(!empty($posicion_numero)){
+        echo "El numero $numero_a_buscar existe y esta en la posicion $posicion_numero<br>";
+    }else{
+        echo "El numero $numero_a_buscar no existe y no se encuentra en el array<br>";
+    }
+}
+*/
 ?>
