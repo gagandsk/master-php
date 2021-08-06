@@ -8,6 +8,7 @@
 
 $animes = array('One Piece', 'Dragon ball Z', 'Attack on titans');
 $juegos = ['The Witcher 3', 'Red Dead Redemprion 2', 'GTA V'];
+
 //var_dump($animes[2]);
 //var_dump($juegos);
 
@@ -30,4 +31,13 @@ foreach($animes as $anime){
     echo "<li>".$anime."</li>";
 }
 echo "</ul>";
+
+//ARRAY ASOCIATIVO
+$piratas = array(
+    'capitan'=> 'Monkey D. Luffy',
+    'bandera'=>'Sombrero de paja',
+    'tripulantes'=>10
+);
+/*var_dump($piratas);
+var_dump($piratas['bandera']);*/
 ?>
