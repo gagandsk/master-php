@@ -53,14 +53,17 @@ $contactos = array(
     array(
         'nombre' => 'Rononoa Zoro',
         'email' => 'rononoaZoro@gmail.com',
+        'edad' => 19,
     ),
     array(
         'nombre' => 'Luffy',
         'email' => 'luffy19@gmail.com',
+        'edad' => 19,
     ),
     array(
         'nombre' => 'Sanji',
         'email' => 'sanji@gmail.com',
+        'edad' => 19,
     )
 );
 var_dump($contactos);
