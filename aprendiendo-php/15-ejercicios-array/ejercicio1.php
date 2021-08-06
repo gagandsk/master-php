@@ -12,6 +12,12 @@ haga lo siguiente:
 
 $numeros = [6,3,1,9,7,5,2,4];
 
+echo "Array original: ";
+foreach($numeros as $numero){
+    echo "<b> ".$numero."</b>";
+}
+echo "<hr>";
+
 /*
 for($i=1; $i<=8; $i++){
     $randoms = rand(1,8);
