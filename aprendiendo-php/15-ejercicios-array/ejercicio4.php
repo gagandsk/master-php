@@ -23,8 +23,9 @@ if(is_integer($tripulantes)){
 }
 
 if(is_bool($estado)){
-    echo "<h1>$bandera</h1>";
+    echo "<h1>$estado</h1>";
 }
+
 
 
 
