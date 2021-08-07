@@ -73,10 +73,18 @@
         <label for="telefono">Telefono</label>
         <p><input type="tel" name="telefono"></p>
 
-        
         <label for="web">Pagina Web</label>
         <p><input type="url" name="web"></p>
 
+        <textarea></textarea><br/>
+
+        <label for="peliculas">Peliculas</label>
+        <select name="peliculas">
+            <option value="Spiderman">Spiderman</option>
+            <option value="Jungle Cruise">Jungle Cruise</option>
+            <option value="Batman">Batman</option>
+        </select>
+        <br/><br/>
         <input type="submit" value="Enviar">
     </form>
 </body>
