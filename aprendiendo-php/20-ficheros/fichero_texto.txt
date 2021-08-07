@@ -1,0 +1,4 @@
+Hola soy un archivo de texto
+Me puedo ir actualizando :D
+Solo Puedo mostrar contenido actualizado con el bucle while ;D
+Texto insertado desde PHP
