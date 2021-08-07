@@ -68,10 +68,13 @@ if($error != 'ok'){
 <body>
     <?php if ($error == 'ok') : ?>
         <h1>Datos validados Correctamente</h1>
+        <h2>Bienvenido <?= $nombre ?></h2>
+        <h4>Tus datos personales:</h4>
         <p><?= $nombre ?></p>
         <p><?= $apellidos ?></p>
         <p><?= $edad ?></p>
         <p><?= $email ?></p>
+        <a href="index.php">Logout</a>
     <?php endif; ?>
 </body>
 
