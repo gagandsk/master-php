@@ -10,8 +10,8 @@ if(!is_dir($nombre_carpeta)){
 }
 
 //Borrar directorios
-
 //rmdir($nombre_carpeta);
+
 echo "<hr>";
 echo "<h1>Contenido de la carpeta '$nombre_carpeta'</h1>";
 if($gestor = opendir('./'.$nombre_carpeta)){
