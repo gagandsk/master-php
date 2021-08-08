@@ -30,4 +30,10 @@ fclose($archivo);
 //Eliminar fitchero
 //unlink('fichero_copiado_renombrado.txt') or die("Error al borrar");
 
+//Comprobar si existe un fichero / archivo
+if(file_exists($file_name)){
+    echo "El fichero Existe";
+}else{
+    echo "El fichero NO Existe";
+}
 ?>
