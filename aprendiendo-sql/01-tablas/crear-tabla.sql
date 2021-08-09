@@ -27,3 +27,5 @@ CREATE TABLE usuarios (
     email      varchar(100),
     password   varchar(255)
 );
+
+/*drop table nombre_tabla(borrar tabla)*/
