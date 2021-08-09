@@ -21,11 +21,12 @@ TIPOS DE DATOS
 /*CREAR TABLA (el nombre de las tablas siempre en plural)*/
 
 CREATE TABLE usuarios (
-    id         int(11),
-    nombre     varchar(100),
-    apellidos  varchar(255),
-    email      varchar(100),
-    password   varchar(255)
+    id         int(11) auto_increment not null,
+    nombre     varchar(100) not null,
+    apellidos  varchar(255) default 'hola que tal',
+    email      varchar(100) not null,
+    password   varchar(255),
+    CONSTRAINT pk_usuarios PRIMARY KEY (id)
 );
 
 /*drop table nombre_tabla(borrar tabla)*/
