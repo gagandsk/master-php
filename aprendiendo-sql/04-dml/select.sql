@@ -24,3 +24,18 @@ SELECT CONCAT(nombre, ' ', apellidos) AS 'Conversion'FROM usuarios;
 SELECT UPPER(CONCAT(nombre, ' ', apellidos)) AS 'Conversion'FROM usuarios; -- FUNCION DENTRO DE OTRA FUNCION
 SELECT email, LENGTH(nombre) FROM usuarios;
 SELECT TRIM(CONCAT('    ', nombre, ' ', apellidos, '        ')) AS 'Conversion'FROM usuarios;
+
+-- FUNCIONES PARA FECHAS
+SELECT email, fecha, CURDATE() AS 'Fecha actual' FROM usuarios;
+SELECT email, DATEDIFF(CURDATE(), fecha) AS 'Diferencia de dias' FROM usuarios; -- DIFERENCIAS ENTRE FECHAS
+SELECT email, DAYNAME(fecha) AS 'Nombre del dia' FROM usuarios;
+SELECT email, DAYOFMONTH(fecha) AS 'Dia del mes ' FROM usuarios;
+SELECT email, DAYOFWEEK(fecha) AS 'Dia del la semana' FROM usuarios;
+SELECT email, DAYOFYEAR(fecha) AS 'Dia del mes' FROM usuarios;
+SELECT email, MONTH(fecha) AS 'Mes del año' FROM usuarios;
+SELECT email, YEAR(fecha) AS 'Año al cual pertenece la fecha' FROM usuarios;
+SELECT email, DAY(fecha) AS 'Dia al cual pertenece la fecha' FROM usuarios;
+SELECT email, HOUR(fecha) AS 'Hora' FROM usuarios;
+SELECT email, CURTIME() AS 'Hora actual' FROM usuarios; -- HORA ACTUAL
+SELECT email, SYSDATE() AS 'Hora completa' FROM usuarios; -- HORA COMPLETA DEL SERVIDO/SISTEMA
+SELECT email, DATE_FORMAT(fecha, '%d-%m-%Y') AS 'TIPO FORMATO' FROM usuarios; -- CANVIAR FORMATO DE FECHA
