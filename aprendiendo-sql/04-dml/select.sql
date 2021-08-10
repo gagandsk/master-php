@@ -3,3 +3,6 @@ SELECT nombre, apellidos FROM usuarios;
 
 -- MOSTRAR TODOS LOS CAMPOS
 SELECT * FROM usuarios;
+
+-- OPERADORES ARITMETICOS
+SELECT email , (4+7) AS 'Operacion' FROM usuarios;
