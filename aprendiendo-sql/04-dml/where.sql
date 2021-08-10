@@ -44,3 +44,10 @@ SELECT * FROM usuarios WHERE (YEAR(fecha)%2 = 0);
 SELECT * FROM usuarios WHERE (YEAR(fecha)%2 != 0);
 /*4.Mostrar todos los registros de la tabla usuarios cuyo nombre tenga más de 3 letras y se hayan registrado antes de 2021, mostrar el nombre en mayusculas*/
 SELECT UPPER(nombre) AS 'Nombre', apellidos FROM usuarios WHERE (LENGTH(nombre) > 3 AND (YEAR(fecha) < 2021));
+
+-- ORDER BY AND LIMIT
+SELECT * FROM usuarios ORDER BY nombre;
+SELECT * FROM usuarios ORDER BY fecha ASC;
+SELECT * FROM usuarios ORDER BY fecha DESC;
+SELECT * FROM usuarios LIMIT 1;
+SELECT * FROM usuarios LIMIT 0,2;
