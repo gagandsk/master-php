@@ -39,3 +39,11 @@ SELECT email, HOUR(fecha) AS 'Hora' FROM usuarios;
 SELECT email, CURTIME() AS 'Hora actual' FROM usuarios; -- HORA ACTUAL
 SELECT email, SYSDATE() AS 'Hora completa' FROM usuarios; -- HORA COMPLETA DEL SERVIDO/SISTEMA
 SELECT email, DATE_FORMAT(fecha, '%d-%m-%Y') AS 'TIPO FORMATO' FROM usuarios; -- CANVIAR FORMATO DE FECHA
+
+-- FUNCIONES GENERALES
+SELECT email, STRCMP('HOLA', 'HOLA') FROM usuarios; -- COMPARAR SI DOS VALORES SON IGUALES O NO
+SELECT VERSION() FROM usuarios;
+SELECT USER() FROM usuarios;
+SELECT DISTINCT USER() FROM usuarios;
+SELECT DISTINCT DATABASE() FROM usuarios;
+SELECT IFNULL (apellidos, 'Este campo esta vacio') FROM usuarios;
