@@ -16,3 +16,11 @@ SELECT RAND() AS 'Operacion' FROM usuarios;
 SELECT ROUND(id, 2) AS 'Operacion' FROM usuarios;
 SELECT SQRT(7.82) AS 'Operacion' FROM usuarios;
 SELECT TRUNCATE(7.82, 2) AS 'Operacion' FROM usuarios; -- QUITAR DECIMALES
+
+-- FUNCIONES PARA TEXTOS
+SELECT UPPER(nombre) FROM usuarios;
+SELECT LOWER(nombre) FROM usuarios;
+SELECT CONCAT(nombre, ' ', apellidos) AS 'Conversion'FROM usuarios;
+SELECT UPPER(CONCAT(nombre, ' ', apellidos)) AS 'Conversion'FROM usuarios; -- FUNCION DENTRO DE OTRA FUNCION
+SELECT email, LENGTH(nombre) FROM usuarios;
+SELECT TRIM(CONCAT('    ', nombre, ' ', apellidos, '        ')) AS 'Conversion'FROM usuarios;
