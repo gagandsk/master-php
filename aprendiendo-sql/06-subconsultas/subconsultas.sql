@@ -32,5 +32,7 @@ SELECT * FROM usuarios WHERE id IN
     (SELECT usuario_id FROM entradas WHERE DAYOFWEEK(fecha) = 4);
 
 /*MOSTRAR EL NOMBRE DEL USUARIO QUE TENGA MAS ENTRADAS*/
+SELECT CONCAT(nombre,' ', apellidos) AS 'El usuario con mas entradas' FROM usuarios WHERE id = (SELECT usuario_id FROM entradas GROUP BY usuario_id ORDER BY COUNT(id) DESC LIMIT 1);
 
 /*MOSTRAR LAS CATEGORIAS SIN ENTRADAS*/
+SELECT * FROM categorias WHERE id NOT IN (SELECT categoria_id FROM entradas);
