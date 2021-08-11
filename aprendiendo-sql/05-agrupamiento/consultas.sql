@@ -20,3 +20,4 @@ SUM     Sumar todo el contenido del grupo
 SELECT AVG(id) AS 'Media de entradas' FROM entradas;
 SELECT MAX(id) AS 'MAXIMO ID' , titulo FROM entradas;
 SELECT MIN(id) AS 'MINIMO ID' , titulo FROM entradas;
+SELECT SUM(id) AS 'SUMA DE TODOS LOS ID' , titulo FROM entradas;
