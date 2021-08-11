@@ -89,11 +89,22 @@ INSERT INTO vendedores VALUES (NULL, 5, NULL, 'Salvador', 'Lopez', 'Vendedor exp
 INSERT INTO vendedores VALUES (NULL, 6, NULL, 'Joaquin', 'Lopez', 'Ejecutivo en cuentas', CURDATE(), 80000, 1);
 INSERT INTO vendedores VALUES (NULL, 6, 8, 'Luis', 'Lopez', 'Ayudante en tienda', CURDATE(), 10000, 10);
 
-
 #CLIENTES#
+INSERT INTO clientes VALUES (NULL, 1, 'Construcciones Diaz Inc', 'Alcobendas', 24000, CURDATE());
+INSERT INTO clientes VALUES (NULL, 1, 'Fruteria Antonia Inc', 'Fuenlabrada', 40000, CURDATE());
+INSERT INTO clientes VALUES (NULL, 1, 'Imprenta martinez Inc', 'Barcelona', 32000, CURDATE());
+INSERT INTO clientes VALUES (NULL, 1, 'Jesus Colchones Inc', 'El Prat', 96000, CURDATE());
+INSERT INTO clientes VALUES (NULL, 1, 'Bar Pepe Inc', 'Valencia', 170000, CURDATE());
+INSERT INTO clientes VALUES (NULL, 1, 'Tienda Pc Inc', 'Murcia', 245000, CURDATE());
 
 
 #ENCARGOS#
+INSERT INTO encargos VALUES (NULL, 1, 1, 2, CURDATE());
+INSERT INTO encargos VALUES (NULL, 2, 2, 4, CURDATE());
+INSERT INTO encargos VALUES (NULL, 3, 3, 1, CURDATE());
+INSERT INTO encargos VALUES (NULL, 4, 3, 3, CURDATE());
+INSERT INTO encargos VALUES (NULL, 5, 5, 1, CURDATE());
+INSERT INTO encargos VALUES (NULL, 6, 6, 1, CURDATE());
 
 
 
