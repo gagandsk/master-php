@@ -8,3 +8,12 @@
 /*SACAR USUARIOS CON ENTRADAS*/
 SELECT * FROM usuarios WHERE id IN(SELECT usuario_id FROM entradas);
 SELECT * FROM usuarios WHERE id NOT IN(SELECT usuario_id FROM entradas);
+
+/*SACAR LOS USUARIOS QUE TANGAN ALGUNA ENTRADA QUE EN SU DESCRIPCION HABLEN DE SANJI*/
+    -- 1. Muestra todos los datos
+SELECT * FROM entradas WHERE id 
+    IN (SELECT usuario_id FROM entradas WHERE descripcion LIKE "%sanji%");
+
+    -- 2. Solo el nombre y el apellido
+SELECT nombre, apellidos FROM usuarios WHERE id 
+    IN (SELECT usuario_id FROM entradas WHERE descripcion LIKE "%sanji%");
