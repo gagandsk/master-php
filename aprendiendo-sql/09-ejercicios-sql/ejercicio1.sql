@@ -78,9 +78,16 @@ INSERT INTO grupos VALUES (NULL,'Vendedores A', 'Bilbao');
 INSERT INTO grupos VALUES (NULL,'Vendedores B', 'Pamplona');
 INSERT INTO grupos VALUES (NULL,'Vendedores C', 'Santiago de compostela');
 
-
-
 #VENDEDORES#
+INSERT INTO vendedores VALUES (NULL, 1, NULL, 'David', 'Lopez', 'Responsable de tienda', CURDATE(), 30000, 4);
+INSERT INTO vendedores VALUES (NULL, 1, 1, 'Fran', 'Martinez', 'Ayudante en tienda', CURDATE(), 23000, 2);
+INSERT INTO vendedores VALUES (NULL, 2, NULL, 'Nelson', 'Sánchez', 'Responsable de tienda', CURDATE(), 38000, 5);
+INSERT INTO vendedores VALUES (NULL, 2, 3, 'Jesus', 'Lopez', 'Ayudante en tienda', CURDATE(), 12000, 6);
+INSERT INTO vendedores VALUES (NULL, 3, NULL, 'Víctor', 'Lopez', 'Mecanico jefe', CURDATE(), 50000, 2);
+INSERT INTO vendedores VALUES (NULL, 4, NULL, 'Antonio', 'Lopez', 'Vendedor de recambios', CURDATE(), 13000, 8);
+INSERT INTO vendedores VALUES (NULL, 5, NULL, 'Salvador', 'Lopez', 'Vendedor experto', CURDATE(), 60000, 2);
+INSERT INTO vendedores VALUES (NULL, 6, NULL, 'Joaquin', 'Lopez', 'Ejecutivo en cuentas', CURDATE(), 80000, 1);
+INSERT INTO vendedores VALUES (NULL, 6, 8, 'Luis', 'Lopez', 'Ayudante en tienda', CURDATE(), 10000, 10);
 
 
 #CLIENTES#
