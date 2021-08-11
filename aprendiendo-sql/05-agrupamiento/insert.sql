@@ -16,7 +16,8 @@ INSERT INTO categorias VALUES(null, 'Navegante');
     -- Usuario 1
 INSERT INTO entradas VALUES(null, 1, 1, 'Monkey D. Luffy', 'Llegar a ser el Rey de los Piratas', CURDATE());
 INSERT INTO entradas VALUES(null, 1, 2, 'Tony Tony Chopper', 'Ser capaz de curar cualquier enfermedad', CURDATE());
-INSERT INTO entradas VALUES(null, 1, 3, 'Sanji', 'Encontrar el "All Blue"', CURDATE());
+INSERT INTO entradas VALUES(null, 1, 3, 'Sanji', 'Encontrar el "All Blue"', CURDATE())
+
     -- Usuario 2
 INSERT INTO entradas VALUES(null, 2, 5, 'Roronoa Zoro', 'Llegar a ser el mejor espadachín del mundo', CURDATE());
 INSERT INTO entradas VALUES(null, 2, 6, 'Usopp', 'Convertirse en un valiente pirata y visitar Elbaf, la tierra de los valientes guerreros', CURDATE());
@@ -25,4 +26,6 @@ INSERT INTO entradas VALUES(null, 3, 7, 'Nico Robin', 'Encontrar el Rio Poneglyp
 INSERT INTO entradas VALUES(null, 3, 8, 'Franky', 'Hacer un barco de ensueño y darle la vuelta al mundo como su carpintero de a bordo.', CURDATE());
 INSERT INTO entradas VALUES(null, 3, 9, 'Brook', '	Reencontrarse con Laboon', CURDATE());
 INSERT INTO entradas VALUES(null, 2, 10, 'Nami', 'Dibujar un mapa de todo el mundo', CURDATE());
+
+
 
