@@ -67,6 +67,27 @@ INSERT INTO coches VALUES (NULL,'Porche Cayena', 'Porche', 65000, 5);
 INSERT INTO coches VALUES (NULL,'Lambo Aventador', 'Lambo', 170000, 2);
 INSERT INTO coches VALUES (NULL,'Ferrari Spider', 'Ferrari', 245000, 80);
 
+#GRUPOS#
+INSERT INTO grupos VALUES (NULL,'Vendedores A', 'Madrid');
+INSERT INTO grupos VALUES (NULL,'Vendedores B', 'Madrid');
+INSERT INTO grupos VALUES (NULL,'Directores mecanicos', 'Madrid');
+INSERT INTO grupos VALUES (NULL,'Vendedores A', 'Barcelona');
+INSERT INTO grupos VALUES (NULL,'Vendedores B', 'Barcelona');
+INSERT INTO grupos VALUES (NULL,'Vendedores C', 'Valencia');
+INSERT INTO grupos VALUES (NULL,'Vendedores A', 'Bilbao');
+INSERT INTO grupos VALUES (NULL,'Vendedores B', 'Pamplona');
+INSERT INTO grupos VALUES (NULL,'Vendedores C', 'Santiago de compostela');
+
+
+
+#VENDEDORES#
+
+
+#CLIENTES#
+
+
+#ENCARGOS#
+
 
 
 
