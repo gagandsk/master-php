@@ -27,7 +27,7 @@ CREATE TABLE vendedores(
     apellidos VARCHAR(100),
     cargo VARCHAR(50),
     fecha DATE,
-    sueldo INT(20,2),
+    sueldo FLOAT(20,2),
     comision FLOAT(10,2),
     CONSTRAINT pk_vendedores PRIMARY KEY(id),
     CONSTRAINT fk_vendedor_grupo FOREIGN KEY (grupo_id) REFERENCES grupos(id),
@@ -52,6 +52,6 @@ CREATE TABLE encargos(
     cantidad INT(100),
     fecha DATE,
     CONSTRAINT pk_encargos PRIMARY KEY(id),
-    CONSTRAINT fk_encargo_cliente FOREIGN KEY(cliente_id) REFERENCES clientes(id)
+    CONSTRAINT fk_encargo_cliente FOREIGN KEY(cliente_id) REFERENCES clientes(id),
     CONSTRAINT fk_encargo_coche FOREIGN KEY(coche_id) REFERENCES coches(id)
 )ENGINE=InnoDB;
