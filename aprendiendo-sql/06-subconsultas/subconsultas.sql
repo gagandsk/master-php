@@ -17,3 +17,20 @@ SELECT * FROM entradas WHERE id
     -- 2. Solo el nombre y el apellido
 SELECT nombre, apellidos FROM usuarios WHERE id 
     IN (SELECT usuario_id FROM entradas WHERE descripcion LIKE "%sanji%");
+
+
+/*SACAR TODAS LAS ENTRADAS DE UNA CATEGORIA UTILIZANDO SU NOMBRE*/
+SELECT titulo FROM entradas WHERE categoria_id IN(SELECT id FROM categorias WHERE nombre = 'Cocinero');
+
+/*MOSTRAR LAS CATEGORIAS CON 3 O MÁS ENTRADA*/
+SELECT * FROM categorias WHERE
+    id IN (SELECT categoria_id FROM entradas GROUP BY categoria_id HAVING COUNT(categoria_id) >= 3);
+
+/*MOSTRAR LOS USUARIOS QUE CREARON UNA ENTRADA UN MIERCOLES (los dias de la semana en ingles o en mysql empiezan a contar desde el domingo(dia 1))*/
+
+SELECT * FROM usuarios WHERE id IN 
+    (SELECT usuario_id FROM entradas WHERE DAYOFWEEK(fecha) = 4);
+
+/*MOSTRAR EL NOMBRE DEL USUARIO QUE TENGA MAS ENTRADAS*/
+
+/*MOSTRAR LAS CATEGORIAS SIN ENTRADAS*/
