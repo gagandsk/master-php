@@ -1,0 +1,8 @@
+/*
+CREAR UNA VISTA LLAMADA vendedoresA QUE INCLUIRÁ TODOS LOS VENDEDORES DEL
+GRUPO QUE SE LLAME "VENDEDORES A"
+*/
+
+CREATE VIEW vendedoresA AS
+SELECT * FROM vendedores WHERE grupo_id IN
+    (SELECT id FROM grupos WHERE nombre="Vendedores A");
