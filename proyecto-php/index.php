@@ -23,10 +23,11 @@
         <nav id="menu">
             <ul>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="">Categoria 1</a></li>
-                <li><a href="">Categoria 2</a></li>
-                <li><a href="">Categoria 3</a></li>
-                <li><a href="">Categoria 4</a></li>
+                <li><a href="">Piratas del Pelirrojo</a></li>
+                <li><a href="">Piratas de Roger</a></li>
+                <li><a href="">Piratas de Sombrero de Paja</a></li>
+                <li><a href="">Piratas de Barbablanca</a></li>
+                <li><a href="">Piratas de Buggy</a></li>
                 <li><a href="">Sobre mi</a></li>
                 <li><a href="">Contacto</a></li>
             </ul>
