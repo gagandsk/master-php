@@ -1,76 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Blog de One Piece</title>
-</head>
-
-<body>
-    <!--CABECERA-->
-    <header id="cabecera">
-        <!--LOGO-->
-        <div id="logo">
-            <a href="index.php">
-                One Piece
-            </a>
-        </div>
-
-        <!--MENU-->
-        <nav id="menu">
-            <ul>
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="">Piratas del Pelirrojo</a></li>
-                <li><a href="">Piratas de Roger</a></li>
-                <li><a href="">Piratas de Sombrero de Paja</a></li>
-                <li><a href="">Piratas de Barbablanca</a></li>
-                <li><a href="">Piratas de Buggy</a></li>
-                <li><a href="">Sobre mi</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="clearfix"></div>
-    </header>
+<?php require_once 'includes/cabecera.php'; ?>
 
     <div id="contenedor">
-        <!--BARRA LATERAL-->
-        <aside id="sidebar">
-            <div id="login" class="bloque">
-                <h3>Identificate</h3>
-                <form action="login.php" method="POST">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" />
-
-                    <label for="password">Contraseña</label>
-                    <input type="password" name="password" />
-
-                    <input type="submit" value="Entrar">
-                </form>
-            </div>
-
-            <div id="register" class="bloque">
-                <h3>Registrate</h3>
-                <form action="registro.php" method="POST">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" />
-
-                    <label for="apellidos">Apellidos</label>
-                    <input type="text" name="apellidos" />
-
-                    <label for="email">Email</label>
-                    <input type="email" name="email" />
-
-                    <label for="password">Contraseña</label>
-                    <input type="password" name="password" />
-
-                    <input type="submit" value="Registrar">
-                </form>
-            </div>
-        </aside>
-
+        
+    <?php require_once 'includes/sidebar.php'; ?>
         <!--CAJA PRINCIPAL-->
         <div id="principal">
             <h1>Ultimas entradas</h1>
@@ -115,11 +47,8 @@
         <div class="clearfix"></div>
     </div>
 
+    <?php require_once 'includes/footer.php'; ?>
 
-    <!--PIE DE PÁGINA-->
-    <footer id="pie">
-        <p>Desarollado por Gagandeep Dass &copy; 2021</p>
-    </footer>
 </body>
 
 </html>
