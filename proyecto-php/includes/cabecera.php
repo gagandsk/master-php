@@ -33,5 +33,6 @@
                 <li><a href="">Contacto</a></li>
             </ul>
         </nav>
-        <div class="clearfix"></div>
     </header>
+    <div class="clearfix"></div>
+    <div id="contenedor">
