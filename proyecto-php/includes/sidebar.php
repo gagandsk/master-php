@@ -1,4 +1,3 @@
-<?php require_once 'includes/helpers.php' ?>
 <!--BARRA LATERAL-->
 <aside id="sidebar">
 
@@ -6,8 +5,9 @@
         <div id="usuario-logeado" class="bloque">
             <h3>Bienvenido, <?=$_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'];?></h3>
             <a href="logout.php" class="boton boton-verde">Crear Entradas</a>
+            <a href="logout.php" class="boton boton">Crear Categoria</a>
             <a href="logout.php" class="boton boton-violeta">Mis Datos</a>
-            <a href="logout.php" class="boton">Cerrar sesion</a>
+            <a href="logout.php" class="boton boton-rojo">Cerrar sesion</a>
         </div>
     <?php endif; ?>
 

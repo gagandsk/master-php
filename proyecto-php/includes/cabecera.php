@@ -1,4 +1,5 @@
 <?php require_once 'conexion.php'; ?>
+<?php require_once 'includes/helpers.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,14 +22,16 @@
         </div>
 
         <!--MENU-->
+
         <nav id="menu">
             <ul>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="">Piratas del Pelirrojo</a></li>
-                <li><a href="">Piratas de Roger</a></li>
-                <li><a href="">Piratas de Sombrero de Paja</a></li>
-                <li><a href="">Piratas de Barbablanca</a></li>
-                <li><a href="">Piratas de Buggy</a></li>
+                <?php
+                    $categorias = conseguirCategorias($db);
+                    while ($categoria = mysqli_fetch_assoc($categorias)) :
+                ?>
+                    <li><a href="categoria.pgp?id=<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></a></li>
+                <?php endwhile; ?>
                 <li><a href="">Sobre mi</a></li>
                 <li><a href="">Contacto</a></li>
             </ul>
