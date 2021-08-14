@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //OPERADOR TERNIARIO (?)
 
 if(isset($_POST['submit'])){
@@ -48,8 +48,15 @@ if(isset($_POST['submit'])){
         $errores['password'] = "La contrasenya esta vacia";
     }
 
-    
-    
+
+    $save_user = false;
+    if(count($errores) == 0){
+        //INSERTAR USUARIO EN LA BASE DE DATOS
+        $save_user = false;
+    }else{
+        $_SESSION['errores'] = $errores;
+        header('Location:index.php');
+    }
     
     
 }
