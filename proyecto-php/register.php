@@ -53,6 +53,15 @@ if(isset($_POST['submit'])){
     if(count($errores) == 0){
         //INSERTAR USUARIO EN LA BASE DE DATOS
         $save_user = false;
+
+        //CIFRAR CONTRASENÑA
+        $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost'=>4]); //el cost me cifra x veces la contraseña
+        /*var_dump($password);
+        var_dump($password_segura);
+        var_dump(password_verify($password, $password_segura));*/
+
+        
+        die();
     }else{
         $_SESSION['errores'] = $errores;
         header('Location:index.php');
