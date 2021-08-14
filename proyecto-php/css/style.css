@@ -20,6 +20,19 @@ body{
     
 }
 
+.alerta{
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    background-color: green;
+    box-shadow: 0px 1px 3px #ccc;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.alerta-error{
+    background-color: red;
+}
 /*CABECERA*/
 #cabecera{
     width: 85%;
