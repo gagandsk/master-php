@@ -4,17 +4,20 @@ if(isset($_POST['submit'])){
     require_once 'includes/conexion.php';
 
     //Iniciar sesión
-    session_start();
+    if(!isset($_SESSION)){
+        session_start();
+    }
 
     //OPERADOR TERNIARIO (?)
 
-    //recojer los valores del formulario de registro
-    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
-    $apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : false;
-    $email = isset($_POST['email']) ? $_POST['email'] : false;
-    $password = isset($_POST['password']) ? $_POST['password'] : false;
-  
+    /*SEGURIDAD AL INSERTAR DATOS EN LA BASE DE DATOS DESDE UN FORMULARIO USAREMOS LA FUNCION mysqli_real_escape_string() */
 
+    //recojer los valores del formulario de registro
+    $nombre = isset($_POST['nombre']) ? mysqli_real_escape_string($db, $_POST['nombre']) : false;
+    $apellidos = isset($_POST['apellidos']) ? mysqli_real_escape_string($db, $_POST['apellidos']) : false;
+    $email = isset($_POST['email']) ? mysqli_real_escape_string($db, $_POST['email']) : false;
+    $password = isset($_POST['password']) ? mysqli_real_escape_string($db, $_POST['password']) : false;
+  
     //array de errores
     $errores = array();
 
@@ -61,14 +64,19 @@ if(isset($_POST['submit'])){
 
         //CIFRAR CONTRASENÑA
         $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost'=>4]); //el cost me cifra x veces la contraseña
-        /*var_dump($password);
+        /*
+        var_dump($password);
         var_dump($password_segura);
-        var_dump(password_verify($password, $password_segura));*/
+        var_dump(password_verify($password, $password_segura));
+        die();
+        */
 
         $sql = "INSERT INTO usuarios VALUES(null, '$nombre', '$apellidos', '$email', '$password_segura', CURDATE())";
         $guardar_usuario = mysqli_query($db, $sql);
-        /*var_dump(mysqli_errno($db));
-        die();*/
+        /*
+        var_dump(mysqli_errno($db));
+        die();
+        */
         if($guardar_usuario){
             $_SESSION['completado'] = "El usuario ha sido registrado con exito";
         }else{

@@ -21,11 +21,11 @@
         <?php if(isset($_SESSION['completado'])): ?>
             <div class="alerta alerta-exito">
                 <?=$_SESSION['completado']?>
-            </div>;
+            </div>
         <?php elseif(isset($_SESSION['errores']['general'])): ?>
             <div class="alerta alerta-error">
                 <?=$_SESSION['errores']['general']?>
-            </div>;
+            </div>
         <?php endif;?>
                
         <form action="register.php" method="POST">
