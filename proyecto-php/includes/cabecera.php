@@ -28,10 +28,14 @@
                 <li><a href="index.php">Inicio</a></li>
                 <?php
                     $categorias = conseguirCategorias($db);
-                    while ($categoria = mysqli_fetch_assoc($categorias)) :
+                    if(!empty($categorias)):
+                        while ($categoria = mysqli_fetch_assoc($categorias)) :
                 ?>
-                    <li><a href="categoria.pgp?id=<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></a></li>
-                <?php endwhile; ?>
+                            <li><a href="categoria.pgp?id=<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></a></li>
+                <?php 
+                        endwhile; 
+                    endif;
+                ?>
                 <li><a href="">Sobre mi</a></li>
                 <li><a href="">Contacto</a></li>
             </ul>
