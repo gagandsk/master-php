@@ -9,6 +9,19 @@ function mostrarErrores($errores, $campo){
 }
 
 function borrarErrores(){
-    $_SESSION['errores'] = null;
-    unset($_SESSION['errores']);
+    
+    $borrado = false;
+
+    if(isset($_SESSION['completado'])){
+        $_SESSION['errores'] = null;
+        $borrado = session_unset($_SESSION['errores']);
+    }
+    
+
+    if(isset($_SESSION['completado'])){
+        $_SESSION['completado'] = null;
+        session_unset(($_SESSION['completado']));
+    }
+
+    return $borrado;
 }

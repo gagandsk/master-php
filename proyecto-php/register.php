@@ -1,8 +1,13 @@
 <?php
-session_start();
-//OPERADOR TERNIARIO (?)
-
 if(isset($_POST['submit'])){
+    //CONEXXION A LA BASE DE DATOS
+    require_once 'includes/conexion.php';
+
+    //Iniciar sesión
+    session_start();
+
+    //OPERADOR TERNIARIO (?)
+
     //recojer los valores del formulario de registro
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
     $apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : false;
@@ -60,16 +65,22 @@ if(isset($_POST['submit'])){
         var_dump($password_segura);
         var_dump(password_verify($password, $password_segura));*/
 
-        
-        die();
+        $sql = "INSERT INTO usuarios VALUES(null, '$nombre', '$apellidos', '$email', '$password_segura', CURDATE())";
+        $guardar_usuario = mysqli_query($db, $sql);
+        /*var_dump(mysqli_errno($db));
+        die();*/
+        if($guardar_usuario){
+            $_SESSION['completado'] = "El usuario ha sido registrado con exito";
+        }else{
+            $_SESSION['errores']['general'] = "Hubo un error al registrar";
+        }
+
     }else{
         $_SESSION['errores'] = $errores;
-        header('Location:index.php');
+        
     }
-    
-    
+
 }
+header('Location:index.php');
 
 //var_dump($_POST);
-
-?>
