@@ -33,6 +33,8 @@ body{
 .alerta-error{
     background-color: red;
 }
+
+
 /*CABECERA*/
 #cabecera{
     width: 85%;
@@ -228,6 +230,11 @@ input[type="submit"],
     margin: 0px auto;
     margin-top: 50px;
 }
+
+.fecha{
+    color: red;
+}
+
 
 /*PIE DE PAGINA*/
 #pie{
