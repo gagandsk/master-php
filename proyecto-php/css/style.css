@@ -166,17 +166,21 @@ input[type="submit"],
     text-align: center;
 }
 .boton{
+    color: white !important;
     width: 130px;
 }
 .boton-violeta{
+    
     background: rgb(162, 0, 255);
     border-color: #5c08bd;
 }
 .boton-verde{
+    
     background: #21b921;
     border-color: green;
 }
 .boton-rojo{
+    
     background-color: red;
     border-color: #444;
 }
