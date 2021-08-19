@@ -1,6 +1,5 @@
 <?php require_once 'includes/cabecera.php'; ?>
 <?php require_once 'includes/sidebar.php';
-/*echo $_SERVER['REMOTE_ADDR']; //IP DEL CLIENTE*/
 ?>
 
 <!--CAJA PRINCIPAL-->
