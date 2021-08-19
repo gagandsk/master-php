@@ -25,7 +25,7 @@ if (!isset($entrada_actual['id'])) {
     <!-- LOS BOTONES DE EDITAR Y BORRAR SOLO ESTAN DISPONIBLES SI ERES EL DUEÑO DE DICHA ENTRADA -->
     <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['id'] == $entrada_actual['usuario_id']):?>
         <a href="editar-entrada.php" class="boton boton-verde">Editar entrada</a>
-        <a href="borrar-entrada.php?id=<?=$entrada_actual['id']?>" class="boton boton">Borrar Entrada</a>
+        <a href="borrar-entrada.php?id=<?=$entrada_actual['id']?>" class="boton boton-rojo">Borrar Entrada</a>
     <?php endif; ?>
 
 
