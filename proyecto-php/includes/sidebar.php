@@ -1,9 +1,19 @@
 <!--BARRA LATERAL-->
 <aside id="sidebar">
 
+    <div id="buscador" class="bloque">
+        <h3>Buscar</h3>
+
+        <form action="buscar.php" method="POST">
+            <input type="text" name="busqueda" id="">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
+
+
     <?php if (isset($_SESSION['usuario'])) : ?>
         <div id="usuario-logeado" class="bloque">
-            <h3>Bienvenido, <?= $_SESSION['usuario']['nombre'] . ' ' .$_SESSION['usuario']['apellidos']; ?></h3>
+            <h3>Bienvenido, <?= $_SESSION['usuario']['nombre'] . ' ' . $_SESSION['usuario']['apellidos']; ?></h3>
             <a href="crear-entradas.php" class="boton boton-verde">Crear Entradas</a>
             <a href="create-category.php" class="boton boton">Crear Categoria</a>
             <a href="mis-datos.php" class="boton boton-violeta">Mis Datos</a>
