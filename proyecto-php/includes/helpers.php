@@ -13,25 +13,25 @@ function mostrarErrores($errores, $campo)
 
 function borrarErrores()
 {
+    $borrado = false;
 
-    //$borrado = false;
-
-    if (isset($_SESSION['completado'])) {
+    if (isset($_SESSION['errores'])) {
         $_SESSION['errores'] = null;
-        unset($_SESSION['errores']);
+        $borrado = true;
     }
 
     if (isset($_SESSION['errores_entrada'])) {
         $_SESSION['errores_entrada'] = null;
+        $borrado = true;
     }
 
 
     if (isset($_SESSION['completado'])) {
         $_SESSION['completado'] = null;
-        unset($_SESSION['completado']);
+        $borrado = true;
     }
 
-    //return $borrado;
+    return $borrado;
 }
 
 function conseguirCategorias($conexion)
