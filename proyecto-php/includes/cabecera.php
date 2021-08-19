@@ -31,7 +31,7 @@
                     if(!empty($categorias)):
                         while ($categoria = mysqli_fetch_assoc($categorias)) :
                 ?>
-                            <li><a href="categoria.pgp?id=<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></a></li>
+                            <li><a href="categoria.php?id=<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></a></li>
                 <?php 
                         endwhile; 
                     endif;
