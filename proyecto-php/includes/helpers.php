@@ -1,5 +1,6 @@
 <?php
 
+//AVECES DA ERROR PORQUE LA CONSULTA ESTA MAL, IMPORTANTE REVISAR LA CONSULTA!!!!!!!
 
 function mostrarErrores($errores, $campo)
 {
@@ -58,6 +59,22 @@ function conseguirCategoria($conexion, $id)
     }
  
     return $result;
+}
+
+function conseguirEntrada($conexion, $id)
+{
+    $sql = "SELECT e.*, c.nombre AS 'categoria' FROM entradas e ".
+           "INNER JOIN categorias c ON e.categoria_id = c.id ".
+           "WHERE e.id = $id;";
+
+    $entrada = mysqli_query($conexion, $sql);
+
+    $resultado = array();
+    if ($entrada && mysqli_num_rows($entrada) >= 1) {
+        $resultado = mysqli_fetch_assoc($entrada);
+    }
+
+    return $resultado;
 }
 
 function conseguirEntradas($conexion, $limit = null, $categoria = null){
