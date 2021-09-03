@@ -63,4 +63,16 @@ class Coche
         return $this->modelo;
     }
 
+    public function mostrarInfo(Coche $objeto){
+
+        if(is_object($objeto)){
+            $informacion = "<h1>Informacion del coche</h1>";
+            $informacion .= "Color: ".$objeto->color;
+            $informacion .= "<br/>Modelo: ".$objeto->modelo;
+            $informacion .= "<br/>Velocidad: ".$objeto->velocidad;
+        }else{
+            $informacion = "Tu objeto es este: $objeto";
+        }
+        return $informacion;
+    }
 }

@@ -10,9 +10,11 @@ $coche1->color = "CIAN";
 #$coche1->marca = "Audi"; #ERROR-> PROTECTED PROPERTY
 $coche1->setMarca("Audi");
 #var_dump($coche1->modelo); #ERROR-> PRIVATE PROPERTY
-var_dump($coche1->getModelo());
+//var_dump($coche1->getModelo());
 
-var_dump($coche1);
+//var_dump($coche1);
 //var_dump($coche1);
 //var_dump($coche2);
 //var_dump($coche3);
+
+echo $coche1->mostrarInfo($coche1);
