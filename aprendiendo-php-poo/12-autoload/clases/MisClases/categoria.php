@@ -1,5 +1,7 @@
 <?php
 
+namespace MisClases; #es un paquete
+
 class Categoria{
     public $nombre;
     public $descripcion;

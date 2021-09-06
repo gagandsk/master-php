@@ -1,5 +1,7 @@
 <?php
 
+namespace MisClases; #es un paquete
+
 class Entrada{
     public $titulo;
     public $fecha;

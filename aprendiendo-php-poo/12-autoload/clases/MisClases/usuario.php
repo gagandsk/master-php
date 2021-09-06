@@ -1,5 +1,7 @@
 <?php
 
+namespace MisClases; #es un paquete
+
 class Usuario{
     public $nombre;
     public $email;
