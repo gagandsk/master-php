@@ -16,3 +16,6 @@ El modelo sera el encargado de interactuar con la base de datos.
 El controlador recibe la información y la enviá a la vista.
 La vista muestra la información
 
+MODELO-> CLASES Y CONSULTA A BASE DE DATOS
+VISTA-> CODIGO HTML Y PHP A NIVEL DE IMPRIMIR COSAS SIMPLEMENTE (IMPRIMIMOS COSAS Y LAS MOSTRAMOS)
+CONTROLADOR-> SE ENCARGA DE HACER LA LOGICA Y LLAMAR A MODELOS Y VISTAS (VA UNIR EL MODELO CON LA VISTA)
