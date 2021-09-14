@@ -1,92 +1,46 @@
 <?php
+require_once 'ModeloBase.php';
 
-class Usuario{
-    public $nombre;
-    public $apellidos;
-    public $email;
-    public $password;
+class Usuario extends ModeloBase{
+	public $nombre;
+	public $apellidos;
+	public $email;
+	public $password;
+	
+	public function __construct() {
+		parent::__construct();
+	}
+	
+	function getNombre() {
+		return $this->nombre;
+	}
 
-    /**
-     * Get the value of nombre
-     */ 
-    public function getNombre()
-    {
-        return $this->nombre;
-    }
+	function getApellidos() {
+		return $this->apellidos;
+	}
 
-    /**
-     * Set the value of nombre
-     *
-     * @return  self
-     */ 
-    public function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
+	function getEmail() {
+		return $this->email;
+	}
 
-        return $this;
-    }
+	function getPassword() {
+		return $this->password;
+	}
 
-    /**
-     * Get the value of apellidos
-     */ 
-    public function getApellidos()
-    {
-        return $this->apellidos;
-    }
+	function setNombre($nombre) {
+		$this->nombre = $nombre;
+	}
 
-    /**
-     * Set the value of apellidos
-     *
-     * @return  self
-     */ 
-    public function setApellidos($apellidos)
-    {
-        $this->apellidos = $apellidos;
+	function setApellidos($apellidos) {
+		$this->apellidos = $apellidos;
+	}
 
-        return $this;
-    }
+	function setEmail($email) {
+		$this->email = $email;
+	}
 
-    /**
-     * Get the value of email
-     */ 
-    public function getEmail()
-    {
-        return $this->email;
-    }
+	function setPassword($password) {
+		$this->password = $password;
+	}
 
-    /**
-     * Set the value of email
-     *
-     * @return  self
-     */ 
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of password
-     */ 
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
-     * Set the value of password
-     *
-     * @return  self
-     */ 
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    public function getAllUsers(){
-        return "Sacar todos los usuarios";
-    }
 }

@@ -1,6 +1,7 @@
-<form action="">
-    Nombre:
-    <input type="text">
-    Apellido:
-    <input type="text">
+<form>
+	Nombre: 
+	<input type="text" />
+	
+	Apellidos: 
+	<input type="text" />
 </form>
