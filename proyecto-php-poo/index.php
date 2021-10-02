@@ -78,7 +78,7 @@
 
         <!-- PIE DE PÁGINA -->
         <footer id="footer">
-            <p>Desarollado por Gagan &copy; <?= date('Y') ?></p>
+            <p>Desarollado por Gagandeep Dass Kaur &copy; <?= date('Y') ?></p>
         </footer>
     </div>
 </body>

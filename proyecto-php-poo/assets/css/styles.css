@@ -257,3 +257,18 @@ button{
     color: #555;
     margin-bottom: 10px;
 }
+
+/*FOOTER*/
+#footer{
+    clear: both; /*CON ESTO LIMPIAMOS LOS FLOTADOS*/
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222;
+    border-top: 4px solid #01B1EA;
+}
+
+#footer p {
+    padding: 10px;
+}
